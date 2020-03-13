@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Navbar from './components/Navbar'
 import './App.css';
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Navbar />
         <header className="App-header">
           <h1>World Class Women</h1>
           <span>World Cup Footballers by Search Interest</span>
