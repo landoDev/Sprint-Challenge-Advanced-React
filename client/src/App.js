@@ -31,12 +31,14 @@ class App extends React.Component {
           <h1>World Class Women</h1>
           <span>2019 World Cup Footballers by Search Interest</span>
         </header>
-        <BarChart width={800} height={800} data={this.state.playerData} margin={{ top: 15, right: 30, bottom: 15, left: 0 }}>
-          <Bar type="monotone" dataKey="searches" stroke="#8884d8" />
+        <BarChart width={1500} height={250} data={this.state.playerData} barCategoryGap='25%'>
+          <Bar type="monotone" dataKey="searches" stroke="#8884d8"  />
           <CartesianGrid stroke="#ccc" />
           <XAxis dataKey="name"/>
           <YAxis dataKey="searches" />
         </BarChart>
+
+        {/* Plan on breaking the Player Cards into another component if I come back to this */}
         {this.state.playerData.map(player=>{
           return(
             <div title='player-render' key={player.id} className='player-id'>
